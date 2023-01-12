@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*
+{
+	--font-heading: #b68834;
+	--para-font: #777777;
+	--black: #222222;
+	--bg: #b68834;
+	--white: rgb(255, 255, 255);
+}
+*
+{
+	font-family: 'Roboto', sans-serif;
+	margin: 0;padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	text-decoration: none;
+	text-transform: capitalize;
+	transition: .2s linear;
+}
+html
+{
+	font-size: 40%;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	scroll-padding-top: 9rem;
+}
+section
+{
+	padding: 8rem 7%;
+}
+.heading
+{
+	font-size: 4rem;
+	text-align: center;
+}
+.heading span 
+{
+	color: var(--font-heading);
+}
+.heading-description
+{
+	text-align: center;
+	padding: 1.3rem 0;
+	font-size: 1.6rem;
+	font-weight: 300;
+	color: var(--black);
+}
+.header
+{
+	width: 100%;
+	height: 100vh;
+	background-color: #b68834;
+  background: url(img/about1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+*{
+
+	padding: 0px;
+	margin: 0px;
+}
+body{
+	background-color: #dbddf1;
+}
+.gallery{
+	padding: 80px 0px;
+}
+img{
+	max-width: 80%;
+}
+.gallery img{
+	background: #fff;
+	padding: 15px;
+	width: 80%;
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+	cursor: pointer;
+}
+#gallery-popup .modal-img{
+	width: 60%;
+}
+.gallery img:hover
+{
+	
+	transform: translateY(-1rem);
+	
+}
+.cont{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin: 40px 20px 0 20px;
+  }
+  
+  
+  .cont .heading{
+	width: 50%;
+	padding-bottom: 50px;
+  }
+  .cont .heading h3{
+	font-size: 3em;
+	font-weight: bolder;
+	padding-bottom: 10px;
+	border-bottom: 3px solid #222;
+  }
+  
+  .cont .heading h3 span{
+	font-weight: 100;
+  }
+  .cont .btn{
+	margin: 40px 0 70px 0;
+	background: #222;
+	padding: 15px 40px ;
+	border-radius: 5px;
+  
+  }
+  .cont .btn a{
+	color: #fff;
+	font-size: 1.2em;
+	text-decoration: none;
+	font-weight: bolder;
+	letter-spacing: 3px;
+	
+   }
+   
+   @media only screen and (max-width: 769px){
+    .cont .box{
+   flex-direction: column;
+  }
+
+
+}
+
+
+@media only screen and (max-width: 643px){
+.cont .heading{
+  width: 100%;
+}
+.cont .heading h3{
+  font-size: 1em;
+
+}
+
+}

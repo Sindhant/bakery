@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+	<title>Contact US</title>
+	<link rel="stylesheet" type="text/css" href="qstyle.css">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand&amp;display=swap" rel="stylesheet">
+	
+</head>
+<body>
+	<div class="container">
+		<div class="contact-box">
+			<div class="left"></div>
+			<div class="right">
+				<h2>Contact Us</h2>
+                <form name="submit-to-google-sheet">
+				<input type="text" class="field" name="Name" placeholder="Your Name">
+				<input type="text" class="field" name="Email" placeholder="Your Email">
+				<input type="text" class="field" name="Phone" placeholder="Phone">
+				<textarea placeholder="Message" name="Message" class="field"></textarea>
+				<button type="submit" class="btn">
+                    <!-- <a href="index.html"> -->
+                    Send</button>
+                </form>
+                <span id="msg"></span>
+
+               
+            
+			</div>
+           
+		</div>
+        
+	</div>
+    
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby9EJbBGY6VagYlii5eQySvW_lBtaT21Gn2El_1jnKUVv8ycysgwtBAx8w3TSQmt9sx/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Sent Successfully!!!!!"
+                    setTimeout(function () {
+                        smsg.innerHTML = ""
+                    }, 5000)
+                    form.reset();
+
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+</body>
+</html>
